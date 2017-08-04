@@ -54,19 +54,16 @@
       <div class="login_wrapper" style="margin: auto;">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form action="validate" method="post">
               <h1>Login</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username" name="uname" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" name="pass" required="" />
               </div>
-              <div class="separator">
-                <div>
-                  <a class="btn btn-default" style="width: 200px">Log in</a>
-                </div>
-              </div>
+              
+              <input type="submit" value="Login" class="btn btn-default submit text-center" style="width: 200px;clear:both;float: none;display:block;margin: auto;"/>
             </form>
           </section>
         </div>
