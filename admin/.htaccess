@@ -1,0 +1,5 @@
+DirectoryIndex index.php
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^getPoints$ php/getPoints.php [QSA,L]
