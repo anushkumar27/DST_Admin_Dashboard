@@ -43,6 +43,7 @@ function setMarkers(map) {
       	var marker = new google.maps.Marker({
 	        position: {lat: parseFloat(markerPoint[2]), lng: parseFloat(markerPoint[3])},
 	        map: map,
+          animation: google.maps.Animation.DROP,
 	        icon: centerImage,
 	        title: markerPoint[1],
 	        zIndex: i
@@ -51,6 +52,7 @@ function setMarkers(map) {
       	var marker = new google.maps.Marker({
 	        position: {lat: parseFloat(markerPoint[2]), lng: parseFloat(markerPoint[3])},
 	        map: map,
+          animation: google.maps.Animation.DROP,
 	        icon: phcImage,
 	        title: markerPoint[1],
 	        zIndex: i
@@ -58,4 +60,23 @@ function setMarkers(map) {
       }
       
     }
+}
+
+function getData() {
+  var xhttp;
+  if(window.XMLHttpRequest){
+    xhttp = new XMLHttpRequest();
+  } else{
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xhttp.onreadystatechange = function (){
+    if(xhttp.readyState == 4 && xhttp.status == 200) {
+      dataReceived = xhttp.responseText;
+      dataReceived = JSON.parse(dataReceived);
+    }
+  };
+
+  xhttp.open("GET", "getPoints",false);
+  xhttp.send();
 }
