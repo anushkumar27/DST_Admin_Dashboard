@@ -24,7 +24,7 @@
   <link href="../build/css/custom.min.css" rel="stylesheet">
 
   <style type="text/css">
-    #map-div {
+    .map-div {
       width: 100%;
       height: 300px;
     }
@@ -65,7 +65,7 @@
                 </li>
                 <li><a><i class="fa fa-group"></i>Student ID Information</a>
                 </li>
-                <li><a href="gis_console"><i class="fa fa-desktop"></i>GIS Console</a>
+                <li><a><i class="fa fa-desktop"></i>GIS Console</a>
                 </li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
@@ -139,61 +139,57 @@
             </div>
           </div>
         <!-- /top tiles -->
+        
         <div class="row">
           <div class="col-md-12">
             <div class="x_panel">
-              <div class="x_title">
-                <h2>Heath Centers Distribution</h2>
-                <div class="clearfix"></div>
-              </div>
               <div class="x_content" >
-                <div id="map-div"></div>
+                <!-- Filter Options -->
               </div>
             </div>
           </div>
         </div>
 
+
         <div class="row">
-
           <div class="col-md-6">
-            <div class="x_panel">
-              <div class="x_title">
-                <p>Refferal Distribution</p>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <canvas id="refferalDoughnut" height="200px"></canvas>
-              </div>
-            </div>
-          </div>
-
-<!--       the weather widget, uncomment if required
-          <div class="col-md-3">
-            <div class="x_panel">
-              <div class="x_title">
-                <p>Weather Report</p>
-                <div class="clearfix"></div>
-              </div>
+            <div class="x_panel" style="padding: 5px 5px;">
               <div class="x_content" >
-                  <a href="http://www.accuweather.com/en/in/kuppam/191872/weather-forecast/191872" class="aw-widget-legal"></a>
-                  <div id="awcc1481390194015" class="aw-widget-current"  data-locationkey="191872" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1481390194015"></div>
-                  <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-              </div>
-            </div>
-          </div>
- -->
-          <div class="col-md-6">
-            <div class="x_panel">
-              <div class="x_title">
-                <p>Mandal Refferal Distribution</p>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <canvas id="mandalDoughnut" height="200px"></canvas>
+                <p> Initial Stage</p>
+                <div class="map-div" id="map-div-1"></div>
               </div>
             </div>
           </div>
 
+          <div class="col-md-6">
+            <div class="x_panel" style="padding: 5px 5px;">
+              <div class="x_content" >
+                <p> Follow-up I</p>
+                <div class="map-div" id="map-div-2"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="x_panel" style="padding: 5px 5px;">
+              <div class="x_content" >
+                <p> Follow-up II</p>
+                <div class="map-div" id="map-div-3"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="x_panel" style="padding: 5px 5px;">
+              <div class="x_content" >
+                <p> Follow-up III</p>
+                <div class="map-div" id="map-div-4"></div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -213,11 +209,10 @@
     <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <!-- Graphs -->
-    <script src="./js/graph.js"></script>
+    <!-- Gmaps Custom-->
+    <script src="./js/gis_maps.js"></script>
     <!-- Gmaps -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZp3Pe7FtxqOHAbJ3NzwyrK1EJVAT1Bk&libraries=visualization&callback=initMap"></script>
-    <!-- Gmaps Custom-->
-    <script src="./js/map.js"></script>
+    
   </body>
 </html>
