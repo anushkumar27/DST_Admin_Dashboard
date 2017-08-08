@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dashboard</title>
+  <title>GIS Console | Dashboard</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/fav.png" />
@@ -59,27 +59,27 @@
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              <h3>General</h3>
+              <h3>G-Sehat Dashboard</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home</a>
+                <li><a href="/DST_Admin_Dashboard/admin"><i class="fa fa-home"></i> Home</a>
                 </li>
-                <li><a><i class="fa fa-group"></i>Student ID Information</a>
+                <li><a href="student_info"><i class="fa fa-group"></i>Student ID Information</a>
                 </li>
-                <li><a><i class="fa fa-desktop"></i>GIS Console</a>
+                <li><a href="gis_console"><i class="fa fa-desktop"></i>GIS Console</a>
                 </li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="form.html">Report Generation</a></li>
-                    <li><a href="form_advanced.html">Follow-Up Updation</a></li>
+                    <li><a href="#">Report Generation</a></li>
+                    <li><a href="#">Follow-Up Updation</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-bar-chart-o"></i>Quick Stats<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="chartjs.html">Chart JS</a></li>
-                    <li><a href="chartjs2.html">Chart JS2</a></li>
-                    <li><a href="morisjs.html">Moris JS</a></li>
-                    <li><a href="echarts.html">ECharts</a></li>
-                    <li><a href="other_charts.html">Other Charts</a></li>
+                    <li><a href="#">Eye</a></li>
+                    <li><a href="#">ENT</a></li>
+                    <li><a href="#">Oral</a></li>
+                    <li><a href="viz_skin">Skin</a></li>
+                    <li><a href="#">General Health</a></li>
                   </ul>
                 </li>
               </ul>
@@ -113,29 +113,21 @@
       <div class="right_col" role="main">
         <!-- top tiles -->
         <div class="row tile_count">
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-graduation-cap"></i> Total Schools</span>
+            <div class="col-md-3 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Initial Stage</span>
               <div class="count green">2500</div>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Students</span>
+            <div class="col-md-3 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Follow-up I</span>
               <div class="count green">123.50</div>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+            <div class="col-md-3 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Follow-up II</span>
               <div class="count green">2,500</div>
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+            <div class="col-md-3 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Follow-up III</span>
               <div class="count green">4,567</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-hospital-o"></i> Total Referrals</span>
-              <div class="count green">2,315</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-medkit"></i> Reports Generated</span>
-              <div class="count green">7,325</div>
             </div>
           </div>
         <!-- /top tiles -->
@@ -143,10 +135,133 @@
         <div class="row">
           <div class="col-md-12">
             <div class="x_panel">
+              <h2>Console Filter</h2>
               <div class="x_content" >
                 <!-- Filter Options -->
-              </div>
-            </div>
+
+                <div class="col-md-2">
+                  <div class="x_title">
+                    <h2>Madal Filter</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="btn-group-vertical" data-toggle="buttons" id="mandals">
+                      <label class="btn btn-default active">
+                          <input type="radio" id="defaultSelection1" name="mandalsName" value="1" checked/> All Mandals
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q157" name="mandalsName" value="2" /> Kuppam
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q158" name="mandalsName" value="3" /> V. Kota
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q159" name="mandalsName" value="4" /> Ramakuppam
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q159" name="mandalsName" value="5" /> Ramakuppam
+                      </label> 
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="x_title">
+                    <h2>Student Filter</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons" id="students">
+                      <label class="btn btn-default active">
+                          <input type="radio" id="defaultSelection2" name="studentsName" value="1" checked/> All Students
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q157" name="studentsName" value="2" /> Male
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q158" name="studentsName" value="3" /> Female
+                      </label> 
+                  </div>
+
+                  <br/>
+                  <br/>
+
+                  <div class="x_title">
+                    <h2>Filter Options</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="btn-group" data-toggle="buttons" id="filterMethod">
+                      <label class="btn btn-default active">
+                          <input type="radio" class="defaultSelection3" name="filterMethodName" value="1" checked/> Union
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" id="q157" name="filterMethodName" value="2" /> Intersection 
+                      </label> 
+                  </div>
+
+                </div>
+                     
+                <div class="col-md-3">
+                  <div class="x_title">
+                    <h2>Diseases Filter</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="btn-group-vertical" data-toggle="buttons" id="d1">
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Dental Caries
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Bitots spots
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Allergic Conjunctivitis
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Vitamin B Complex Deficiency
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Wax
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> ASOM
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> CSOM
+                      </label>  
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="x_title">
+                    <h2>(MultiSelect)</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="btn-group-vertical" data-toggle="buttons" id="d2">
+
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Otitis Externa
+                      </label> 
+                       <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Adenotonsilitis
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Pityriasis Alba
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Pediculosis
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Scabies
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Papular Urticaria
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Xerosis
+                      </label>
+                  </div>
+                </div>
+
+                <div class="col-md-1">
+                  <input type="button" class="btn btn-info" onclick="updateMap()" value="GO" style="padding: 10px; margin: 10px;margin-top: 100px; font-weight: bold; height: 100px;width: 50px;"/> 
+                </div>
           </div>
         </div>
 
@@ -214,5 +329,38 @@
     <!-- Gmaps -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZp3Pe7FtxqOHAbJ3NzwyrK1EJVAT1Bk&libraries=visualization&callback=initMap"></script>
     
+
+    <script type="text/javascript">
+      //$("#defaultSelection1").prop("checked", true);
+      //$("#defaultSelection2").prop("checked", true);
+     // $(".defaultSelection3").prop("checked", true);
+     //document.getElementById("defaultSelection1").checked = true;
+
+     //document.getElementById("defaultSelection2").checked = true;
+
+      function updateMap(){
+        var mandals = $("#mandals input:radio:checked").map(function(){
+          return $(this).val();
+        }).get();
+        var students = $("#students input:radio:checked").map(function(){
+          return $(this).val();
+        }).get();
+        var filterMethod = $("#filterMethod input:radio:checked").map(function(){
+          return $(this).val();
+        }).get();
+        var d1 = $("#d1 input:checkbox:checked").map(function(){
+          return $(this).val();
+        }).get();
+        var d2 = $("#d2 input:checkbox:checked").map(function(){
+          return $(this).val();
+        }).get();
+
+        console.log("Mandals", mandals);
+        console.log("Student", students);
+        console.log("filterMethod", filterMethod);
+        console.log("D1", d1);
+        console.log("D2", d2);
+      }
+    </script>
   </body>
 </html>

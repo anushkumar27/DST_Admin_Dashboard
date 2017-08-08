@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dashboard</title>
+  <title>Skin | Dashboard</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/fav.png" />
@@ -22,13 +22,6 @@
 
   <!-- Custom Theme Style -->
   <link href="../build/css/custom.min.css" rel="stylesheet">
-
-  <style type="text/css">
-    #map-div {
-      width: 100%;
-      height: 300px;
-    }
-  </style>
 </head>
 
 <body class="nav-md">
@@ -37,7 +30,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title text-center"><img src="./images/logo.png" width="100px" /></a>
+            <a href="/DST_Admin_Dashboard/admin" class="site_title text-center"><img src="./images/logo.png" width="100px" /></a>
           </div>
 
           <div class="clearfix"></div>
@@ -78,7 +71,7 @@
                     <li><a href="#">Eye</a></li>
                     <li><a href="#">ENT</a></li>
                     <li><a href="#">Oral</a></li>
-                    <li><a href="#">Skin</a></li>
+                    <li><a href="viz_skin">Skin</a></li>
                     <li><a href="#">General Health</a></li>
                   </ul>
                 </li>
@@ -115,54 +108,41 @@
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-graduation-cap"></i> Total Schools</span>
-              <div class="count green" id="nSchools"></div>
+              <div class="count green">2500</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Students</span>
-              <div class="count green" id="nStudents"></div>
+              <div class="count green">123.50</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count green" id="nMale"></div>
+              <div class="count green">2,500</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count green" id="nFemale"></div>
+              <div class="count green">4,567</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-hospital-o"></i> Total Referrals</span>
-              <div class="count green" id="nReferel"></div>
+              <div class="count green">2,315</div>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-medkit"></i> Reports Generated</span>
-              <div class="count green" id="nReport"></div>
+              <div class="count green">7,325</div>
             </div>
           </div>
         <!-- /top tiles -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Heath Centers Distribution</h2>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content" >
-                <div id="map-div"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         <div class="row">
 
           <div class="col-md-6">
             <div class="x_panel">
               <div class="x_title">
-                <p>Referral Distribution</p>
+                <p>Refferal Distribution</p>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <p>The graph below visulises the frequency distribution of affected children in their affected disease domain in the region of study</p>
                 <canvas id="refferalDoughnut" height="200px"></canvas>
               </div>
             </div>
@@ -186,11 +166,10 @@
           <div class="col-md-6">
             <div class="x_panel">
               <div class="x_title">
-                <p>Mandal Referral Distribution</p>
+                <p>Mandal Refferal Distribution</p>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <p>The graph below visulises the frequency distribution of affected children in differenct region of study</p>
                 <canvas id="mandalDoughnut" height="200px"></canvas>
               </div>
             </div>
@@ -216,10 +195,6 @@
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <!-- Graphs -->
-    <script src="./js/graph.js"></script>
-    <!-- Gmaps -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZp3Pe7FtxqOHAbJ3NzwyrK1EJVAT1Bk&libraries=visualization&callback=initMap"></script>
-    <!-- Gmaps Custom-->
-    <script src="./js/map.js"></script>
+    <script src="./js/skin_graph.js"></script>
   </body>
 </html>

@@ -1,14 +1,6 @@
 // call for data
 getData();
 
-// setting data of top tiles 
-document.getElementById('nSchools').innerHTML = dataReceived.nSchools;
-document.getElementById('nStudents').innerHTML = parseInt(dataReceived.nMale) + parseInt(dataReceived.nFemale);
-document.getElementById('nMale').innerHTML = dataReceived.nMale;
-document.getElementById('nFemale').innerHTML = dataReceived.nFemale;
-document.getElementById('nReferel').innerHTML = dataReceived.nReferel;
-document.getElementById('nReport').innerHTML = dataReceived.nReport;
-
 var refferalChart = document.getElementById("refferalDoughnut");
 var refferalChartDataConfig = {
         type: 'doughnut',
