@@ -146,19 +146,19 @@
                   </div>
                   <div class="btn-group-vertical" data-toggle="buttons" id="mandals">
                       <label class="btn btn-default active">
-                          <input type="radio" id="defaultSelection1" name="mandalsName" value="1" checked/> All Mandals
+                          <input type="radio" name="mandalsName" value="1" checked/> All Mandals
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q157" name="mandalsName" value="2" /> Kuppam
+                          <input type="radio" name="mandalsName" value="2" /> Kuppam
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q158" name="mandalsName" value="3" /> V. Kota
+                          <input type="radio" name="mandalsName" value="3" /> V. Kota
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q159" name="mandalsName" value="4" /> Ramakuppam
+                          <input type="radio" name="mandalsName" value="4" /> Ramakuppam
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q159" name="mandalsName" value="5" /> Ramakuppam
+                          <input type="radio" name="mandalsName" value="5" /> Ramakuppam
                       </label> 
                     </div>
                 </div>
@@ -170,13 +170,13 @@
                   </div>
                   <div class="btn-group" data-toggle="buttons" id="students">
                       <label class="btn btn-default active">
-                          <input type="radio" id="defaultSelection2" name="studentsName" value="1" checked/> All Students
+                          <input type="radio" name="studentsName" value="1" checked/> All Students
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q157" name="studentsName" value="2" /> Male
+                          <input type="radio" name="studentsName" value="2" /> Male
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q158" name="studentsName" value="3" /> Female
+                          <input type="radio" name="studentsName" value="3" /> Female
                       </label> 
                   </div>
 
@@ -189,10 +189,10 @@
                   </div>
                   <div class="btn-group" data-toggle="buttons" id="filterMethod">
                       <label class="btn btn-default active">
-                          <input type="radio" class="defaultSelection3" name="filterMethodName" value="1" checked/> Union
+                          <input type="radio" name="filterMethodName" value="1" checked/> Union
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" id="q157" name="filterMethodName" value="2" /> Intersection 
+                          <input type="radio" name="filterMethodName" value="2" /> Intersection 
                       </label> 
                   </div>
 
@@ -205,25 +205,25 @@
                   </div>
                   <div class="btn-group-vertical" data-toggle="buttons" id="d1">
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Dental Caries
+                          <input type="checkbox" name="d" value="1" /> Dental Caries
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Bitots spots
+                          <input type="checkbox" name="d" value="1" /> Bitots spots
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Allergic Conjunctivitis
+                          <input type="checkbox" name="d" value="1" /> Allergic Conjunctivitis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Vitamin B Complex Deficiency
+                          <input type="checkbox" name="d" value="1" /> Vitamin B Complex Deficiency
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Wax
+                          <input type="checkbox" name="d" value="1" /> Wax
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> ASOM
+                          <input type="checkbox" name="d" value="1" /> ASOM
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> CSOM
+                          <input type="checkbox" name="d" value="1" /> CSOM
                       </label>  
                   </div>
                 </div>
@@ -236,25 +236,25 @@
                   <div class="btn-group-vertical" data-toggle="buttons" id="d2">
 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Otitis Externa
+                          <input type="checkbox" name="d" value="1" /> Otitis Externa
                       </label> 
                        <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Adenotonsilitis
+                          <input type="checkbox" name="d" value="1" /> Adenotonsilitis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Pityriasis Alba
+                          <input type="checkbox" name="d" value="1" /> Pityriasis Alba
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Pediculosis
+                          <input type="checkbox" name="d" value="1" /> Pediculosis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Scabies
+                          <input type="checkbox" name="d" value="1" /> Scabies
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Papular Urticaria
+                          <input type="checkbox" name="d" value="1" /> Papular Urticaria
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" id="q156" name="quality[25]" value="1" /> Xerosis
+                          <input type="checkbox" name="d" value="1" /> Xerosis
                       </label>
                   </div>
                 </div>
@@ -331,12 +331,6 @@
     
 
     <script type="text/javascript">
-      //$("#defaultSelection1").prop("checked", true);
-      //$("#defaultSelection2").prop("checked", true);
-     // $(".defaultSelection3").prop("checked", true);
-     //document.getElementById("defaultSelection1").checked = true;
-
-     //document.getElementById("defaultSelection2").checked = true;
 
       function updateMap(){
         var mandals = $("#mandals input:radio:checked").map(function(){
