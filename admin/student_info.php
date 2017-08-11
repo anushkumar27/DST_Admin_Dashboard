@@ -67,14 +67,7 @@
                     <li><a href="#">Follow-Up Updation</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i>Quick Stats<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="#">Eye</a></li>
-                    <li><a href="#">ENT</a></li>
-                    <li><a href="#">Oral</a></li>
-                    <li><a href="#">Skin</a></li>
-                    <li><a href="#">General Health</a></li>
-                  </ul>
+                <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
                 </li>
               </ul>
             </div>

@@ -1,8 +1,8 @@
 // call for data
 getData();
-
-var doughnutStudents = document.getElementById("doughnutStudents");
-var doughnutStudentsDataConfig = {
+console.log("Eye",dataReceived);
+var eyeDoughnutStudents = document.getElementById("eyeDoughnutStudents");
+var eyeDoughnutStudentsDataConfig = {
         type: 'doughnut',
         data: {
             datasets: [{
@@ -29,24 +29,23 @@ var doughnutStudentsDataConfig = {
             }
         }
     };
-var doughnutStudentsObj = new Chart(doughnutStudents, doughnutStudentsDataConfig);
+var eyeDoughnutStudentsObj = new Chart(eyeDoughnutStudents, eyeDoughnutStudentsDataConfig);
 
-var pieDisease = document.getElementById("pieDisease");
-var pieDiseaseDataConfig = {
+var eyePieDisease = document.getElementById("eyePieDisease");
+var eyePieDiseaseDataConfig = {
         type: 'pie',
         data: {
             datasets: [{
                 data: [
-                  dataReceived.Scabies,
-                  dataReceived.PityriasisAlba,
-                  dataReceived.Phrynoderma,
-                  dataReceived.Pediculosis,
-                  dataReceived.Impetigo,
-                  dataReceived.Papularurticaria,
-                  dataReceived.TineaCrusis,
-                  dataReceived.Miliaria,
-                  dataReceived.ViralWarts,
-                  dataReceived.Xerosis
+                  dataReceived.ColourVision,
+                  dataReceived.BitotSpots,
+                  dataReceived.AllergicConjunctivitis,
+                  dataReceived.NightBlindness,
+                  dataReceived.CongenitalPtosis,
+                  dataReceived.CongenitalDevelopmentalCararact,
+                  dataReceived.Amblyopia,
+                  dataReceived.Nystagmus,
+                  dataReceived.FundusExamination
                 ],
                 backgroundColor: [
                    '#2c3e50',
@@ -57,22 +56,20 @@ var pieDiseaseDataConfig = {
                    '#c0392b',
                    '#e67e22',
                    '#f1c40f',
-                   '#27ae60',
-                   '#2980b9'
+                   '#27ae60'
                 ],
                 label: 'Dataset'
             }],
             labels: [
-                "Scabies",
-                "Pityriasis Alba",
-                "Phrynoderma",
-                "Pediculosis",
-                "Impetigo",
-                "Papularurticaria",
-                "Tinea Crusis",
-                "Miliaria",
-                "Viral Warts",
-                "Xerosis"
+                "Colour Vision",
+                "Bitot Spots",
+                "Allergic Conjunctivitis",
+                "Night Blindness",
+                "Congenital Ptosis",
+                "Congenital Developmental Cararact",
+                "Amblyopia",
+                "Nystagmus",
+                "FundusExamination"
             ]
         },
         options: {
@@ -86,7 +83,7 @@ var pieDiseaseDataConfig = {
             }
         }
     };
-var pieDiseaseObj = new Chart(pieDisease, pieDiseaseDataConfig);
+var eyePieDiseaseObj = new Chart(eyePieDisease, eyePieDiseaseDataConfig);
 
 function getData() {
   var xhttp;
@@ -104,7 +101,7 @@ function getData() {
     }
   };
 
-  xhttp.open("GET", "getAllDataSkin",false);
+  xhttp.open("GET", "getAllDataEye",false);
   xhttp.send();
 }
 

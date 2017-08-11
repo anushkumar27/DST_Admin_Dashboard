@@ -1,8 +1,8 @@
 // call for data
 getData();
 
-var doughnutStudents = document.getElementById("doughnutStudents");
-var doughnutStudentsDataConfig = {
+var entDoughnutStudents = document.getElementById("entDoughnutStudents");
+var entDoughnutStudentsDataConfig = {
         type: 'doughnut',
         data: {
             datasets: [{
@@ -29,50 +29,56 @@ var doughnutStudentsDataConfig = {
             }
         }
     };
-var doughnutStudentsObj = new Chart(doughnutStudents, doughnutStudentsDataConfig);
-
-var pieDisease = document.getElementById("pieDisease");
-var pieDiseaseDataConfig = {
+var entDoughnutStudentsObj = new Chart(entDoughnutStudents, entDoughnutStudentsDataConfig);
+console.log(dataReceived);
+var entPieDisease = document.getElementById("entPieDisease");
+var entPieDiseaseDataConfig = {
         type: 'pie',
         data: {
             datasets: [{
                 data: [
-                  dataReceived.Scabies,
-                  dataReceived.PityriasisAlba,
-                  dataReceived.Phrynoderma,
-                  dataReceived.Pediculosis,
-                  dataReceived.Impetigo,
-                  dataReceived.Papularurticaria,
-                  dataReceived.TineaCrusis,
-                  dataReceived.Miliaria,
-                  dataReceived.ViralWarts,
-                  dataReceived.Xerosis
+                  dataReceived.OtitisExterna,
+                  dataReceived.ASOM,
+                  dataReceived.CSOM,
+                  dataReceived.ImpactedWax,
+                  dataReceived.ImpairedHearing,
+                  dataReceived.Epistaxis,
+                  dataReceived.Adenotonsilitis,
+                  dataReceived.Pharyngitis,
+                  dataReceived.AllergicRhinitis,
+                  dataReceived.SpeechDefects,
+                  dataReceived.URTI,
+                  dataReceived.Cleft
                 ],
                 backgroundColor: [
                    '#2c3e50',
                    '#16a085',
                    '#f39c12',
                    '#7f8c8d',
-                   '#d35400',
+                   '#9b59b6',
                    '#c0392b',
                    '#e67e22',
                    '#f1c40f',
                    '#27ae60',
-                   '#2980b9'
+                   '#2980b9',
+                   '#1abc9c',
+                   '#3498db'
                 ],
                 label: 'Dataset'
             }],
             labels: [
-                "Scabies",
-                "Pityriasis Alba",
-                "Phrynoderma",
-                "Pediculosis",
-                "Impetigo",
-                "Papularurticaria",
-                "Tinea Crusis",
-                "Miliaria",
-                "Viral Warts",
-                "Xerosis"
+                "Otitis Externa",
+                "ASOM",
+                "CSOM",
+                "Impacted Wax",
+                "Impaired Hearing",
+                "Epistaxis",
+                "Adenotonsilitis",
+                "Pharyngitis",
+                "Allergic Rhinitis",
+                "SpeechDefects",
+                "URTI",
+                "Cleft"
             ]
         },
         options: {
@@ -86,7 +92,7 @@ var pieDiseaseDataConfig = {
             }
         }
     };
-var pieDiseaseObj = new Chart(pieDisease, pieDiseaseDataConfig);
+var entPieDiseaseObj = new Chart(entPieDisease, entPieDiseaseDataConfig);
 
 function getData() {
   var xhttp;
@@ -104,7 +110,7 @@ function getData() {
     }
   };
 
-  xhttp.open("GET", "getAllDataSkin",false);
+  xhttp.open("GET", "getAllDataEnt",false);
   xhttp.send();
 }
 

@@ -73,14 +73,7 @@
                     <li><a href="#">Follow-Up Updation</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i>Quick Stats<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="#">Eye</a></li>
-                    <li><a href="#">ENT</a></li>
-                    <li><a href="#">Oral</a></li>
-                    <li><a href="viz_skin">Skin</a></li>
-                    <li><a href="#">General Health</a></li>
-                  </ul>
+                <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
                 </li>
               </ul>
             </div>
@@ -146,13 +139,16 @@
                   </div>
                   <div class="btn-group-vertical" data-toggle="buttons" id="mandals">
                       <label class="btn btn-default active">
-                          <input type="radio" name="mandalsName" value="1" checked/> All Mandals
+                          <input type="radio" name="mandalsName" value="0" checked/> All Mandals
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" name="mandalsName" value="2" /> Kuppam
+                          <input type="radio" name="mandalsName" value="1" /> Kuppam
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" name="mandalsName" value="3" /> V. Kota
+                          <input type="radio" name="mandalsName" value="2" /> V. Kota
+                      </label> 
+                      <label class="btn btn-default">
+                          <input type="radio" name="mandalsName" value="3" /> Ramakuppam
                       </label> 
                       <label class="btn btn-default">
                           <input type="radio" name="mandalsName" value="4" /> Ramakuppam
@@ -170,13 +166,13 @@
                   </div>
                   <div class="btn-group" data-toggle="buttons" id="students">
                       <label class="btn btn-default active">
-                          <input type="radio" name="studentsName" value="1" checked/> All Students
+                          <input type="radio" name="studentsName" value="0" checked/> All Students
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" name="studentsName" value="2" /> Male
+                          <input type="radio" name="studentsName" value="1" /> Male
                       </label> 
                       <label class="btn btn-default">
-                          <input type="radio" name="studentsName" value="3" /> Female
+                          <input type="radio" name="studentsName" value="2" /> Female
                       </label> 
                   </div>
 
@@ -205,25 +201,25 @@
                   </div>
                   <div class="btn-group-vertical" data-toggle="buttons" id="d1">
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Dental Caries
+                          <input type="checkbox" name="d" value="health1%oe_dc" /> Dental Caries
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Bitots spots
+                          <input type="checkbox" name="d" value="eye%bs_r#bs_l" /> Bitots spots
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Allergic Conjunctivitis
+                          <input type="checkbox" name="d" value="eye%ac_r#ac_l" /> Allergic Conjunctivitis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Vitamin B Complex Deficiency
+                          <input type="checkbox" name="d" value="health2%vt_b" /> Vitamin B Complex Deficiency
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Wax
+                          <input type="checkbox" name="d" value="ent%iw_r#iw_l" /> Wax
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> ASOM
+                          <input type="checkbox" name="d" value="ent%as_r#as_l" /> ASOM
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> CSOM
+                          <input type="checkbox" name="d" value="ent%cs_r#cs_l" /> CSOM
                       </label>  
                   </div>
                 </div>
@@ -236,25 +232,25 @@
                   <div class="btn-group-vertical" data-toggle="buttons" id="d2">
 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Otitis Externa
+                          <input type="checkbox" name="d" value="ent%oe_r#oe_l" /> Otitis Externa
                       </label> 
                        <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Adenotonsilitis
+                          <input type="checkbox" name="d" value="ent%ad" /> Adenotonsilitis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Pityriasis Alba
+                          <input type="checkbox" name="d" value="skin%pi" /> Pityriasis Alba
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Pediculosis
+                          <input type="checkbox" name="d" value="skin%pe" /> Pediculosis
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Scabies
+                          <input type="checkbox" name="d" value="skin%sc" /> Scabies
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Papular Urticaria
+                          <input type="checkbox" name="d" value="skin%pap" /> Papular Urticaria
                       </label> 
                       <label class="btn btn-default">
-                          <input type="checkbox" name="d" value="1" /> Xerosis
+                          <input type="checkbox" name="d" value="skin%xerosis" /> Xerosis
                       </label>
                   </div>
                 </div>
@@ -349,11 +345,41 @@
           return $(this).val();
         }).get();
 
-        console.log("Mandals", mandals);
-        console.log("Student", students);
-        console.log("filterMethod", filterMethod);
-        console.log("D1", d1);
-        console.log("D2", d2);
+        res = {};
+        table = {};
+
+        table['health1'] = [];
+        table['health2'] = [];
+        table['eye'] = [];
+        table['ent'] = [];
+        table['skin'] = [];
+
+        temp = {};
+        res['mandals'] = mandals;
+        res['student'] = students;
+        res['filterMethod'] = filterMethod;
+        temp['d'] = d1.concat(d2);
+        
+        for(i = 0; i < temp['d'].length; i++){
+          mytempSplit = temp['d'][i].split('%');
+          mytempSplitCol = mytempSplit[1].split('#');
+          //table[mytempSplit[0]] = [];
+          for(j = 0; j < mytempSplitCol.length; j++){
+            //console.log(mytempSplit[0]+" : "+mytempSplitCol[j]);
+            table[mytempSplit[0]].push(mytempSplitCol[j]);
+          }
+        }
+
+        res['d'] = table;
+        
+        // console.log("Mandals", mandals);
+        // console.log("Student", students);
+        // console.log("filterMethod", filterMethod);
+        // console.log("D1", d1);
+        // console.log("D2", d2);
+
+        //TODO check if disease has been checked
+        console.log(JSON.stringify(res));
       }
     </script>
   </body>

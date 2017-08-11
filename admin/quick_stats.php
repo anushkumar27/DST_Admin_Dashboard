@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Skin | Dashboard</title>
+  <title>Quick Stats | Dashboard</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/fav.png" />
@@ -66,14 +66,7 @@
                     <li><a href="#">Follow-Up Updation</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i>Quick Stats<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="#">Eye</a></li>
-                    <li><a href="#">ENT</a></li>
-                    <li><a href="#">Oral</a></li>
-                    <li><a href="viz_skin">Skin</a></li>
-                    <li><a href="#">General Health</a></li>
-                  </ul>
+                <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
                 </li>
               </ul>
             </div>
@@ -104,79 +97,112 @@
 
       <!-- page content -->
       <div class="right_col" role="main">
-        <!-- top tiles -->
-        <div class="row tile_count">
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-graduation-cap"></i> Total Schools</span>
-              <div class="count green">2500</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Students</span>
-              <div class="count green">123.50</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count green">2,500</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count green">4,567</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-hospital-o"></i> Total Referrals</span>
-              <div class="count green">2,315</div>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-medkit"></i> Reports Generated</span>
-              <div class="count green">7,325</div>
-            </div>
-          </div>
-        <!-- /top tiles -->
-
-
+        <!-- Skin -->
         <div class="row">
 
           <div class="col-md-6">
             <div class="x_panel">
               <div class="x_title">
-                <p>Refferal Distribution</p>
+                <p>Skin Disease Distribution (Male Vs Female)</p>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <canvas id="refferalDoughnut" height="200px"></canvas>
+                <p>The graph below visulises the distributionion of male and female children affected with skin diseases (referral)</p>
+                <canvas id="doughnutStudents" height="190px"></canvas>
               </div>
             </div>
           </div>
 
-<!--       the weather widget, uncomment if required
-          <div class="col-md-3">
-            <div class="x_panel">
-              <div class="x_title">
-                <p>Weather Report</p>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content" >
-                  <a href="http://www.accuweather.com/en/in/kuppam/191872/weather-forecast/191872" class="aw-widget-legal"></a>
-                  <div id="awcc1481390194015" class="aw-widget-current"  data-locationkey="191872" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1481390194015"></div>
-                  <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-              </div>
-            </div>
-          </div>
- -->
           <div class="col-md-6">
             <div class="x_panel">
               <div class="x_title">
-                <p>Mandal Refferal Distribution</p>
+                <p>Skin Disease Distribution (Disease)</p>
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
-                <canvas id="mandalDoughnut" height="200px"></canvas>
+              <p>The graph below visulises the distributionion of skin diseases in the region of study</p>
+                <canvas id="pieDisease" height="200px"></canvas>
               </div>
             </div>
           </div>
 
+        </div>
+        <!-- Skin -->
+
+        <!-- Eye -->
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="x_panel">
+              <div class="x_title">
+                <p>Eye Disease Distribution (Male Vs Female)</p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <p>The graph below visulises the distributionion of male and female children affected with Eye diseases (referral)</p>
+                <canvas id="eyeDoughnutStudents" height="190px"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="x_panel">
+              <div class="x_title">
+                <p>Eye Disease Distribution (Disease)</p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+              <p>The graph below visulises the distributionion of Eye diseases in the region of study</p>
+                <canvas id="eyePieDisease" height="200px"></canvas>
+              </div>
+            </div>
+          </div>
 
         </div>
+        <!-- Eye -->
+
+        <!-- ENT -->
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="x_panel">
+              <div class="x_title">
+                <p>ENT Disease Distribution (Male Vs Female)</p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <p>The graph below visulises the distributionion of male and female children affected with ENT diseases (referral)</p>
+                <canvas id="entDoughnutStudents" height="190px"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="x_panel">
+              <div class="x_title">
+                <p>ENT Disease Distribution (Disease)</p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+              <p>The graph below visulises the distributionion of ENT diseases in the region of study</p>
+                <canvas id="entPieDisease" height="200px"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ENT -->
+
+        <!-- Coming Soon -->
+        <div class="row">
+          <div class="col-md-12">
+            
+                <h5 class="text-center">More Stats</h5>
+                <img src="images/coming_soon.gif" align="middle" style="display: block;margin-right: auto;margin-left: auto;"/>
+          </div>
+        </div>
+        <!-- Coming Soon -->
+
       </div>
     </div>
     <!-- /page content -->
@@ -196,5 +222,7 @@
     <script src="../build/js/custom.min.js"></script>
     <!-- Graphs -->
     <script src="./js/skin_graph.js"></script>
+    <script src="./js/ent_graph.js"></script>
+    <script src="./js/eye_graph.js"></script>
   </body>
 </html>
