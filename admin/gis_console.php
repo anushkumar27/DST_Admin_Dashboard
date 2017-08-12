@@ -108,19 +108,19 @@
         <div class="row tile_count">
             <div class="col-md-3 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Initial Stage</span>
-              <div class="count green">2500</div>
+              <div class="count green" id="c1"> - </div>
             </div>
             <div class="col-md-3 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Follow-up I</span>
-              <div class="count green">123.50</div>
+              <div class="count green" id="c2"> - </div>
             </div>
             <div class="col-md-3 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Follow-up II</span>
-              <div class="count green">2,500</div>
+              <div class="count green" id="c3"> - </div>
             </div>
             <div class="col-md-3 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Follow-up III</span>
-              <div class="count green">4,567</div>
+              <div class="count green" id="c4"> - </div>
             </div>
           </div>
         <!-- /top tiles -->
@@ -179,18 +179,7 @@
                   <br/>
                   <br/>
 
-                  <div class="x_title">
-                    <h2>Filter Options</h2>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="btn-group" data-toggle="buttons" id="filterMethod">
-                      <label class="btn btn-default active">
-                          <input type="radio" name="filterMethodName" value="1" checked/> Union
-                      </label> 
-                      <label class="btn btn-default">
-                          <input type="radio" name="filterMethodName" value="2" /> Intersection 
-                      </label> 
-                  </div>
+                  
 
                 </div>
                      
@@ -324,63 +313,6 @@
     <script src="./js/gis_maps.js"></script>
     <!-- Gmaps -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZp3Pe7FtxqOHAbJ3NzwyrK1EJVAT1Bk&libraries=visualization&callback=initMap"></script>
-    
 
-    <script type="text/javascript">
-
-      function updateMap(){
-        var mandals = $("#mandals input:radio:checked").map(function(){
-          return $(this).val();
-        }).get();
-        var students = $("#students input:radio:checked").map(function(){
-          return $(this).val();
-        }).get();
-        var filterMethod = $("#filterMethod input:radio:checked").map(function(){
-          return $(this).val();
-        }).get();
-        var d1 = $("#d1 input:checkbox:checked").map(function(){
-          return $(this).val();
-        }).get();
-        var d2 = $("#d2 input:checkbox:checked").map(function(){
-          return $(this).val();
-        }).get();
-
-        res = {};
-        table = {};
-
-        table['health1'] = [];
-        table['health2'] = [];
-        table['eye'] = [];
-        table['ent'] = [];
-        table['skin'] = [];
-
-        temp = {};
-        res['mandals'] = mandals;
-        res['student'] = students;
-        res['filterMethod'] = filterMethod;
-        temp['d'] = d1.concat(d2);
-        
-        for(i = 0; i < temp['d'].length; i++){
-          mytempSplit = temp['d'][i].split('%');
-          mytempSplitCol = mytempSplit[1].split('#');
-          //table[mytempSplit[0]] = [];
-          for(j = 0; j < mytempSplitCol.length; j++){
-            //console.log(mytempSplit[0]+" : "+mytempSplitCol[j]);
-            table[mytempSplit[0]].push(mytempSplitCol[j]);
-          }
-        }
-
-        res['d'] = table;
-        
-        // console.log("Mandals", mandals);
-        // console.log("Student", students);
-        // console.log("filterMethod", filterMethod);
-        // console.log("D1", d1);
-        // console.log("D2", d2);
-
-        //TODO check if disease has been checked
-        console.log(JSON.stringify(res));
-      }
-    </script>
   </body>
 </html>

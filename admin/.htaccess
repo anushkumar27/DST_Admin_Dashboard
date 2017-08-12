@@ -8,6 +8,7 @@ RewriteRule ^student_info$ student_info.php [QSA,L]
 
 RewriteRule ^getAllData$ php/getAllData.php [QSA,L]
 RewriteRule ^getPoints$ php/getPoints.php [QSA,L]
+RewriteRule ^getGISPoints$ php/getGISPoints.php [QSA,L]
 RewriteRule ^getStudentData$ php/getStudentData.php [QSA,L]
 RewriteRule ^getAllDataSkin$ php/getAllDataSkin.php [QSA,L]
 RewriteRule ^getAllDataEnt$ php/getAllDataEnt.php [QSA,L]
