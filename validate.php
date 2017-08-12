@@ -3,14 +3,12 @@
 	// data
 	$uname = $_POST['uname'];
 	$pass = $_POST['pass'];
+	
+	$sth = mysqli_query($bd,  'SELECT `name`, `role` FROM `users` WHERE `uname`="'.$uname.'" AND `upass`="'.$pass.'"');
+	
+	$datas = mysqli_fetch_row($sth);
 
-	$datas = $database->select("users", ["name", "role"], [
-		"AND" => [
-			"uname" => $uname,
-			"upass" => $pass
-		]
-	]);
-	switch ($datas[0]['role']) {
+	switch ($datas[1]) {
 		case '1':
 			$loc = "school";
 			break;
@@ -29,7 +27,7 @@
 	}else{
 		session_start();
 		$_SESSION["userId"] = $uname;
-		$_SESSION["userName"] = $datas[0]['name'];
+		$_SESSION["userName"] = $datas[0];
 		header('Location:'.$loc);
 	}
 ?>
