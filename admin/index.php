@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!$_SESSION['userName']){
+      header('Location: /DST_Admin_Dashboard');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,11 +51,11 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="images/user.png" alt="..." class="img-circle profile_img">
+              <img src="images/user.png" id="profileImage1" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>John Doe</h2>
+              <h2><?php echo $_SESSION['userName']; ?></h2>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -89,11 +95,11 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/user.png" alt="">John Doe
+                  <img src="images/user.png" id="profileImage2" alt=""><?php echo $_SESSION['userName']; ?>
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
             </ul>
@@ -214,5 +220,14 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUZp3Pe7FtxqOHAbJ3NzwyrK1EJVAT1Bk&libraries=visualization&callback=initMap"></script>
     <!-- Gmaps Custom-->
     <script src="./js/map.js"></script>
+
+    <script type="text/javascript">
+      var userId= '<?php echo $_SESSION['userId']; ?>';
+
+      // set profile pic
+      document.getElementById("profileImage1").src="images/"+userId+".png";
+      document.getElementById("profileImage2").src="images/"+userId+".png";
+
+    </script>
   </body>
 </html>
