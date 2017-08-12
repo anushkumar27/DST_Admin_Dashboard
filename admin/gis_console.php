@@ -75,8 +75,8 @@
                 </li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="#">Report Generation</a></li>
-                    <li><a href="#">Follow-Up Updation</a></li>
+                    <li><a href="/report" target="_blank">Report Generation</a></li>
+                    <li><a href="/follow_up" target="_blank" >Follow-Up Updation</a></li>
                   </ul>
                 </li>
                 <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
