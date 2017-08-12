@@ -228,6 +228,14 @@
       document.getElementById("profileImage1").src="images/"+userId+".png";
       document.getElementById("profileImage2").src="images/"+userId+".png";
 
+      document.getElementById("profileImage1").onerror = function(e) {
+           document.getElementById("profileImage1").src="images/user.png";
+      };
+
+       document.getElementById("profileImage2").onerror = function(e) {
+          document.getElementById("profileImage1").src="images/user.png";
+      };
+
     </script>
   </body>
 </html>

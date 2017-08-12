@@ -60,12 +60,12 @@
             <div class="menu_section">
               <h3>G-Sehat Dashboard</h3>
               <ul class="nav side-menu">
-                <li><a href="/DST_Admin_Dashboard/admin"><i class="fa fa-home"></i> Home</a>
+                <li><a href="/DST_Admin_Dashboard/school"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li><a href="student_info"><i class="fa fa-group"></i>Student ID Information</a>
                 </li>
-                <li><a href="gis_console"><i class="fa fa-desktop"></i>GIS Console</a>
-                </li>
+                <!-- <li><a href="gis_console"><i class="fa fa-desktop"></i>GIS Console</a>
+                </li> -->
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="/report" target="_blank" >Report Generation</a></li>
@@ -73,8 +73,8 @@
                     >Follow-Up Updation</a></li>
                   </ul>
                 </li>
-                <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
-                </li>
+                <!-- <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -408,6 +408,7 @@
        document.getElementById("profileImage2").onerror = function(e) {
           document.getElementById("profileImage1").src="images/user.png";
       };
+
 
     </script>
 </body>
