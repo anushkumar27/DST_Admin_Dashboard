@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Export</title>
+</head>
+<body onload="getData()">
+<div id="sch_table">
+<p><h1>Welcome to Kuppam Health Visualization</h1></p>
+
+<p><h2>Analyse the Socio details of the children</h2></p>
+<form action="excel.php" method="post">
+<input type="submit" name="export_excel" value="Export to Excel"/></form>
+</div>
+</body>
+
+<script type="text/javascript">
+ 	var ip_address = window.location.hostname;
+	
+		function getData() {
+		var xhttp,data;
+		if (window.XMLHttpRequest){
+			xhttp = new XMLHttpRequest();
+		}
+		else{
+			xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xhttp.onreadystatechange = function ()
+		{
+			if(xhttp.readyState==4 && xhttp.status==200)
+			{
+				data = xhttp.responseText;
+				document.getElementById("sch_table").innerHTML +=data;				
+			}
+		};
+		xhttp.open("POST","http://"+ip_address+"/ConsolidatedReport/school.php",false);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("s="+20102003);
+	}
+
+</script>
+
+</html>

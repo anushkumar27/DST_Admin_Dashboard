@@ -1,0 +1,27 @@
+<?php
+	//Include database connection details
+	require_once('php/connect.php');
+	session_start();
+	
+	$sid = $_POST['sid'];
+
+	$qry1="SELECT * FROM child WHERE child_id='$sid'";
+
+	$result1=mysqli_query($bd,$qry1);
+	
+	//Check whether the query was successful or not
+	if($result1) {
+		if(mysqli_num_rows($result1) > 0) {
+			//Login Successful
+			$_SESSION['sid'] = $sid;
+			header("location: dashboard.php");
+			exit();
+		}else {
+			//Login failed
+			header("location: index.php");
+			exit();
+		}
+	}else {
+		die("Query failed");
+	}
+?>

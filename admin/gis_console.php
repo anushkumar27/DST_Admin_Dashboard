@@ -43,7 +43,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title text-center"><img src="./images/logo.png" width="100px" /></a>
+            <a href="#" class="site_title text-center"><img src="./images/logo.png" width="100px" /></a>
           </div>
 
           <div class="clearfix"></div>
@@ -75,8 +75,8 @@
                 </li>
                 <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="/report" target="_blank">Report Generation</a></li>
-                    <li><a href="/follow_up" target="_blank" >Follow-Up Updation</a></li>
+                    <li><a href="./report" target="_blank">Report Generation</a></li>
+                    <li><a href="./follow_up" target="_blank" >Follow-Up Updation</a></li>
                   </ul>
                 </li>
                 <li><a href="quick_stats"><i class="fa fa-bar-chart-o"></i>Quick Stats</a>
@@ -99,7 +99,7 @@
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
             </ul>
